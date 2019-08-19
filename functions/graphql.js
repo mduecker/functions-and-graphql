@@ -1,5 +1,5 @@
 const { ApolloServer, gql } = require("apollo-server-lambda");
-const fetch = require("node-fetch");
+const fetch = require("node-fetch").default;
 
 const typeDefs = gql`
   type Query {
