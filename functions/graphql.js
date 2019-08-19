@@ -21,7 +21,8 @@ const resolvers = {
       return `Hello from Netlify function. https://bit.ly/2UXh0fD`;
     },
     todo: async (root, args, context) => {
-      return await fetch("https://jsonplaceholder.typicode.com/todos/1").json();
+      const todo = await fetch("https://jsonplaceholder.typicode.com/todos/1");
+      return await todo.json();
     }
   }
 };
